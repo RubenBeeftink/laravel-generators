@@ -14,13 +14,13 @@
   },
   "autoload": {
     "psr-4": {
-      "RubenBeeftink\\Generators\\Commands": "src/"
+      "RubenBeeftink\\Commands\\Generators": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "RubenBeeftink\\Generators\\GeneratorServiceProvider"
+        "RubenBeeftink\\GeneratorServiceProvider"
       ]
     }
   }

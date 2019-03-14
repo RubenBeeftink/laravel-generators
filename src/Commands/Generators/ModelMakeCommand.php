@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Console\Commands\Generators;
+namespace RubenBeeftink\Commands\Generators;
+
 
 use Illuminate\Foundation\Console\ModelMakeCommand as BaseModelMakeCommand;
 

@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Console\Commands;
+namespace RubenBeeftink\Commands\Generators;
+
 
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Console\Command;

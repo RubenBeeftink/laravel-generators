@@ -16,5 +16,12 @@
     "psr-4": {
       "RubenBeeftink\\LaravelGenerators\\": "src/"
     }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "RubenBeeftink\\Generators\\GeneratorServiceProvider"
+      ]
+    }
   }
 }

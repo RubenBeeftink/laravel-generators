@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\Generators;
+namespace RubenBeeftink\Commands\Generators;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;

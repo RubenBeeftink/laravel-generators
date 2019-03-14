@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\Generators;
+namespace RubenBeeftink\Commands\Generators;
 
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Foundation\Console\RequestMakeCommand as BaseRequestMakeCommand;

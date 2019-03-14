@@ -1,6 +1,6 @@
 <?php
 
-namespace RubenBeeftink\Generators;
+namespace RubenBeeftink;
 
 use Illuminate\Support\ServiceProvider;
 use RubenBeeftink\Commands\Generators\ControllerMakeCommand;

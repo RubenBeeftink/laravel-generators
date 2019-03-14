@@ -20,7 +20,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "RubenBeeftink\\Generators\\GeneratorServiceProvider"
+        "RubenBeeftink\\GeneratorServiceProvider"
       ]
     }
   }

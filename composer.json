@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "RubenBeeftink\\Generators\\": "src/"
+      "RubenBeeftink\\Generators\\Commands": "src/"
     }
   },
   "extra": {

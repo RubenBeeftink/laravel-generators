@@ -4,6 +4,7 @@ namespace DummyNamespace;
 
 use FullDummyModelClass;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
 class DummyClass
@@ -12,7 +13,7 @@ class DummyClass
         {
             return DummyModelClass::search($data)
                 ->sort($data)
-                ->paginate(array_get($data, 'per_page', 25));
+                ->paginate(Arr::get($data, 'per_page', 25));
         }
 
         public function index(array $data): Collection

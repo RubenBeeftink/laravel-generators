@@ -11,7 +11,7 @@ use RubenBeeftink\Commands\Generators\RequestMakeCommand;
 use RubenBeeftink\Commands\Generators\ResourceMakeCommand;
 use RubenBeeftink\Commands\Generators\ValidationMakeCommand;
 
-class AppServiceProvider extends ServiceProvider
+class GeneratorServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.

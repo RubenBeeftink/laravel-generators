@@ -20,14 +20,16 @@ class GeneratorServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->commands([
-            ControllerMakeCommand::class,
-            EndpointMakeCommand::class,
-            ModelMakeCommand::class,
-            RepositoryMakeCommand::class,
-            RequestMakeCommand::class,
-            ResourceMakeCommand::class,
-            ValidationMakeCommand::class,
-        ]);
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                ControllerMakeCommand::class,
+                EndpointMakeCommand::class,
+                ModelMakeCommand::class,
+                RepositoryMakeCommand::class,
+                RequestMakeCommand::class,
+                ResourceMakeCommand::class,
+                ValidationMakeCommand::class,
+            ]);
+        }
     }
 }

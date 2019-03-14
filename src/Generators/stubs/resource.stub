@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Http\Resources;
+
+use Illuminate\Http\Request;
+
+class DummyResourceClass extends Resource
+{
+    /**
+     * @param Request $request
+     *
+     * @return array
+     */
+    public function attributesToArray(Request $request): array
+    {
+        return $this->resource->attributesToArray();
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @return array
+     */
+    public function relationsToArray(Request $request): array
+    {
+        return $this->resource->relationsToArray();
+    }
+}

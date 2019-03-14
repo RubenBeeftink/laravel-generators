@@ -1,0 +1,24 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Models\Validation\Contracts\ValidationContract;
+use Illuminate\Support\Collection;
+
+class DummyClass implements ValidationContract
+{
+    public static function attributes(): array
+    {
+        return [];
+    }
+
+    public static function messages(): array
+    {
+        return [];
+    }
+
+    public static function rules(array $data = []): Collection
+    {
+        return collect([]);
+    }
+}

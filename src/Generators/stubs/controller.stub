@@ -1,0 +1,107 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Http\Resources\AnonymousResourceCollection;
+use App\Http\Requests\Api\IndexRequest;
+use DummyRootNamespaceHttp\Controllers\Controller;
+use FullDummyRepositoryClass;
+use FullDummyModelClass;
+use FullDummyResourceClass;
+use Illuminate\Http\JsonResponse;
+
+class DummyClass extends Controller
+{
+    /**
+     * Get the paginated resource of the model.
+     *
+     * @param IndexRequest $request
+     * @param DummyRepositoryClass $repository
+     *
+     * @return DummyResourceClass
+     */
+    public function paginated(IndexRequest $request, DummyRepositoryClass $repository): AnonymousResourceCollection
+    {
+        $data = $repository->paginated($request->validated());
+
+        return DummyResourceClass::collection($data);
+    }
+
+    /**
+     * Get the index resource of the model.
+     *
+     * @param IndexRequest $request
+     * @param DummyRepositoryClass $repository
+     *
+     * @return DummyResourceClass
+     */
+    public function index(IndexRequest $request, DummyRepositoryClass $repository): AnonymousResourceCollection
+    {
+        $data = $repository->index($request->validated());
+
+        return DummyResourceClass::collection($data);
+    }
+
+    /**
+     * Get the specific resource of the model.
+     *
+     * @param DummyModelClass $dummyClass
+     * @param DummyRepositoryClass $repository
+     *
+     * @return DummyResourceClass
+     */
+    public function show(DummyModelClass $dummyClass, DummyRepositoryClass $repository): DummyResourceClass
+    {
+        $data = $repository->show($dummyClass);
+
+        return DummyResourceClass::make($data);
+    }
+
+    /**
+     * Create a new model.
+     *
+     * @param DummyModelClassStoreRequest @request
+     * @param DummyRepositoryClass $repository
+     *
+     * @return DummyResourceClass
+     */
+    public function store(DummyModelClassStoreRequest $request, DummyRepositoryClass $repository): DummyResourceClass
+    {
+        $data = $repository->store($request->validated());
+
+        return DummyResourceClass::make($data);
+    }
+
+    /**
+     * Update a model.
+     *
+     * @param DummyModelClassUpdateRequest @request
+     * @param DummyModelClass $dummyClass
+     * @param DummyRepositoryClass $repository
+     *
+     * @return DummyResourceClass
+     */
+    public function update(DummyModelClassUpdateRequest $request, DummyModelClass $dummyClass, DummyRepositoryClass $repository): DummyResourceClass
+    {
+        $data = $repository->update($request->validated(), $dummyClass);
+
+        return DummyResourceClass::make($data);
+    }
+
+     /**
+      * delete a model.
+      *
+      * @param DummyModelClass $dummyClass
+      * @param DummyRepositoryClass $repository
+      *
+      * @return JsonResponse
+      */
+     public function delete(DummyModelClass $dummyClass, DummyRepositoryClass $repository): JsonResponse
+     {
+        $repository->delete($dummyClass);
+
+        return response()->json([
+            'success' => true,
+        ], 200);
+     }
+}

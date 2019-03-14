@@ -1,0 +1,24 @@
+<?php
+
+namespace DummyNamespace;
+
+use FullDummyModelClass;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Collection;
+
+class DummyClass
+{
+    public function paginated(array $data): LengthAwarePaginator
+        {
+            return DummyModelClass::search($data)
+                ->sort($data)
+                ->paginate(array_get($data, 'per_page', 25));
+        }
+
+        public function index(array $data): Collection
+        {
+            return DummyModelClass::search($data)
+                ->sort($data)
+                ->get();
+        }
+}

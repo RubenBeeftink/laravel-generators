@@ -1,0 +1,29 @@
+<?php
+
+namespace DummyNamespace;
+
+use FullDummyValidationClass;
+use Illuminate\Foundation\Http\FormRequest;
+
+class DummyClass extends FormRequest
+{
+    public function authorize(): bool
+    {
+        return true;
+    }
+    
+    public function attributes(): array
+    {
+        return DummyValidationClass::attributes();
+    }
+
+    public function messages(): array
+    {
+        return DummyValidationClass::messages();
+    }
+    
+    public function rules(): array
+    {
+        return DummyValidationClass::rules()->toArray();
+    }
+}
